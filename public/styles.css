@@ -1,0 +1,12 @@
+body {
+    background-color: #7478af;
+}
+
+.container {
+    background-color: cadetblue;
+    min-height: 30vh;
+}
+
+.jumbotron {
+    background-color: cadetblue;
+}
