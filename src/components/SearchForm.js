@@ -4,45 +4,51 @@ import MovieList from './MovieList';
 import { searchMovie, fetchMovies } from '../actions';
 
 export class SearchForm extends React.Component {
+  //Helper Functions
+  onChange = e => {
+    this.props.searchMovie(e.target.value);
+  };
 
-    //Helper Functions
-    onChange = e => {
-        this.props.searchMovie(e.target.value);
-    };
+  onSubmit = e => {
+    e.preventDefault();
+    this.props.fetchMovies(this.props.text);
+  };
 
-    onSubmit = e => {
-        e.preventDefault();
-        this.props.fetchMovies(this.props.text);
-    };
-
-    render() {
-        return (
-            <React.Fragment>
-                <div className="jumbotron jumbotron-fluid mt-5 text-center">
-                    <div className="container">
-                        <h1 className="display-4 mb-3">
-                            Reel Movies
-                        </h1>
-                        <p>powered by omdb</p>
-                        <form id="searchForm" onSubmit={this.onSubmit}>
-                        <input
-                            type="text"
-                            className="form-control"
-                            name="searchText"
-                            placeholder="Search by Title..."
-                            autoComplete="off"
-                            onChange={this.onChange}
-                        />
-                        <button type="submit" className="btn btn-primary btn-bg mt-3">
-                            Search
-                        </button>
-                        </form>
-                    </div>
-                </div>
-                <MovieList />
-            </React.Fragment>
-        );
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <header className='masthead text-center text-white'>
+          <div className='masthead-content'>
+            <h1 className='masthead-heading mb-0'>Reel Movies</h1>
+            <p>powered by omdb</p>
+          </div>
+          <form id='searchForm' onSubmit={this.onSubmit}>
+            <input
+              type='text'
+              className='form-control'
+              name='searchText'
+              placeholder='Search by Title...'
+              autoComplete='off'
+              onChange={this.onChange}
+            />
+            <button
+              type='submit'
+              className='btn btn-primary btn-xl rounded-pill mt-5'
+            >
+              Search
+            </button>
+          </form>
+          <div className='bg-circle-1 bg-circle'></div>
+          <div className='bg-circle-2 bg-circle'></div>
+          <div className='bg-circle-3 bg-circle'></div>
+          <div className='bg-circle-4 bg-circle'></div>
+        </header>
+        <div className='container'>
+          <MovieList />
+        </div>
+      </React.Fragment>
+    );
+  }
 }
 
 const mapStateToProps = state => ({

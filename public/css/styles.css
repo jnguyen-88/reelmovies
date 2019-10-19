@@ -1,0 +1,18 @@
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+#searchForm {
+    position: relative;
+    width: 65%;
+    margin: 0 auto;
+    z-index: 100;
+  }
+
+  .form-control:focus {
+    box-shadow: none!important;
+    border-color: #ced4da!important;
+}
