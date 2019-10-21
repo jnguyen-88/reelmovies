@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchMovies } from '../actions';
 import MovieCard from './MovieCard';
+import Movie from './Movie';
 
 export class MoviesList extends React.Component {
   render() {

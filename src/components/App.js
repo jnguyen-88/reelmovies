@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom';
-import SearchForm from './SearchForm';
-
+import Landing from './Landing';
+import MovieList from './MovieList';
 import Movie from './Movie';
 
 class App extends React.Component {
@@ -9,8 +9,9 @@ class App extends React.Component {
     return (
       <div>
         <Router>
-          <Route exact path='/' component={SearchForm} />
-          <Route exact path='/movie/:id' component={Movie} />
+          <Route exact path='/' component={Landing} />
+          {/* <Route exact path='/movies' component={MovieList} /> */}
+          <Route exact path='/movies/:id' component={Movie} />
         </Router>
       </div>
     );
