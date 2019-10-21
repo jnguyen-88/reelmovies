@@ -7,12 +7,16 @@ button:focus {
 
 #searchForm {
     position: relative;
-    width: 65%;
+    width: 45%;
     margin: 0 auto;
     z-index: 100;
-  }
+}
 
-  .form-control:focus {
-    box-shadow: none!important;
-    border-color: #ced4da!important;
+.form-control{
+  border-radius: 16px;
+}
+
+.form-control:focus {
+  box-shadow: none!important;
+  border-color: #ced4da!important;
 }
