@@ -5,6 +5,7 @@ import Team from './Team';
 import MovieList from './MovieList';
 
 const Landing = props => {
+  console.log(props);
   return (
     <React.Fragment>
       <Header />

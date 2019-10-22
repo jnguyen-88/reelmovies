@@ -1,9 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import MovieList from './MovieList';
-import Download from './Download';
 import { searchMovie, fetchMovies } from '../actions';
-import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 export class SearchForm extends React.Component {
   //Helper Functions
@@ -27,11 +25,9 @@ export class SearchForm extends React.Component {
           autoComplete='off'
           onChange={this.onChange}
         />
-        {/* <Link to={`/movies`} type='submit'> */}
         <button className='btn btn-primary btn-xl rounded-pill mt-5'>
           Search
         </button>
-        {/* </Link> */}
       </form>
     );
   }
@@ -45,3 +41,21 @@ export default connect(
   mapStateToProps,
   { searchMovie, fetchMovies }
 )(SearchForm);
+
+// Button does not redirect
+{
+  /* <button
+          to={`/movies`}
+          renderAs={Link}
+          className='btn btn-primary btn-xl rounded-pill mt-5'
+        >
+          Search
+        </button> */
+}
+
+// Link's enter does not work
+{
+  /* <Link to={`/movies`} type='submit'>
+Click
+</Link> */
+}
