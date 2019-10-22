@@ -24,17 +24,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
-// const url = 'http://www.omdbapi.com/?apikey=thewdb&t=short'
-
-// const moviedb = async () => {
-//     const res = await fetch(url);
-//     const data = await res.json()
-//     console.log(data)
-// }
-
-// moviedb();
-
-// http://www.omdbapi.com/?i=tt3896198&apikey=thewdb
-
-// http://www.omdbapi.com/?apikey=thewdb&
