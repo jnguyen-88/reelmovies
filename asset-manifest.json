@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/reelmovies/static/js/main.50788e9f.chunk.js",
-    "main.js.map": "/reelmovies/static/js/main.50788e9f.chunk.js.map",
+    "main.js": "/reelmovies/static/js/main.19262f51.chunk.js",
+    "main.js.map": "/reelmovies/static/js/main.19262f51.chunk.js.map",
     "runtime-main.js": "/reelmovies/static/js/runtime-main.af73094d.js",
     "runtime-main.js.map": "/reelmovies/static/js/runtime-main.af73094d.js.map",
-    "static/js/2.3e2e4633.chunk.js": "/reelmovies/static/js/2.3e2e4633.chunk.js",
-    "static/js/2.3e2e4633.chunk.js.map": "/reelmovies/static/js/2.3e2e4633.chunk.js.map",
+    "static/js/2.bfd158f3.chunk.js": "/reelmovies/static/js/2.bfd158f3.chunk.js",
+    "static/js/2.bfd158f3.chunk.js.map": "/reelmovies/static/js/2.bfd158f3.chunk.js.map",
     "index.html": "/reelmovies/index.html",
-    "precache-manifest.630403c969d18461c1e41973470f9b74.js": "/reelmovies/precache-manifest.630403c969d18461c1e41973470f9b74.js",
+    "precache-manifest.984bc95175547ed9e9d7b544a30c677a.js": "/reelmovies/precache-manifest.984bc95175547ed9e9d7b544a30c677a.js",
     "service-worker.js": "/reelmovies/service-worker.js"
   },
   "entrypoints": [
     "static/js/runtime-main.af73094d.js",
-    "static/js/2.3e2e4633.chunk.js",
-    "static/js/main.50788e9f.chunk.js"
+    "static/js/2.bfd158f3.chunk.js",
+    "static/js/main.19262f51.chunk.js"
   ]
 }
