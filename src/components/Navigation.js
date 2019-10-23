@@ -7,7 +7,10 @@ const Navigation = props => {
       id='mainNav'
     >
       <div className='container'>
-        <a className='navbar-brand js-scroll-trigger' href='/'>
+        <a
+          className='navbar-brand js-scroll-trigger'
+          href='https://jnguyen-88.github.io/reelmovies/#/'
+        >
           Reel Movies
         </a>
         <button
@@ -30,7 +33,10 @@ const Navigation = props => {
               </a>
             </li>
             <li className='nav-item'>
-              <a className='nav-link js-scroll-trigger' href='/'>
+              <a
+                className='nav-link js-scroll-trigger'
+                href='https://jnguyen-88.github.io/reelmovies/#/'
+              >
                 Team
               </a>
             </li>
