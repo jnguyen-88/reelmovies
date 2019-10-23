@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { searchMovie, fetchMovies } from '../actions';
+import { searchMovie, fetchMovies, setRedirect } from '../actions';
 import { Redirect } from 'react-router-dom';
 
 export class SearchForm extends React.Component {
@@ -12,34 +12,45 @@ export class SearchForm extends React.Component {
   onSubmit = e => {
     e.preventDefault();
     this.props.fetchMovies(this.props.text);
+    this.props.setRedirect();
+  };
+
+  renderRedirect = () => {
+    if (this.props.redirect) {
+      return <Redirect to='/movies' />;
+    }
   };
 
   render() {
     return (
-      <form id='searchForm' onSubmit={this.onSubmit}>
-        <input
-          type='text'
-          className='form-control'
-          name='searchText'
-          placeholder='Search by Title...'
-          autoComplete='off'
-          onChange={this.onChange}
-        />
-        <button className='btn btn-primary btn-xl rounded-pill mt-5'>
-          Search
-        </button>
-      </form>
+      <div>
+        {this.renderRedirect()}
+        <form id='searchForm' onSubmit={this.onSubmit}>
+          <input
+            type='text'
+            className='form-control'
+            name='searchText'
+            placeholder='Search by Title...'
+            autoComplete='off'
+            onChange={this.onChange}
+          />
+          <button className='btn btn-primary btn-xl rounded-pill mt-5'>
+            Search
+          </button>
+        </form>
+      </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
+  redirect: state.movies.redirect,
   text: state.movies.text
 });
 
 export default connect(
   mapStateToProps,
-  { searchMovie, fetchMovies }
+  { searchMovie, fetchMovies, setRedirect }
 )(SearchForm);
 
 // Button does not redirect

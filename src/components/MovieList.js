@@ -19,7 +19,7 @@ export class MoviesList extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  movies: state.movies.movies
+  movies: state.movies.moviesArr
 });
 
 export default connect(mapStateToProps)(MoviesList);

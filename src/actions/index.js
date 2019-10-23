@@ -20,3 +20,7 @@ export const searchMovie = term => dispatch => {
 export const setLoading = () => {
   return { type: 'LOADING' };
 };
+
+export const setRedirect = () => {
+  return { type: 'REDIRECT' };
+};
