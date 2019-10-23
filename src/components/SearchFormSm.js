@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { searchMovie, fetchMovies, setRedirect } from '../actions';
 import { Redirect } from 'react-router-dom';
 
-export class SearchForm extends React.Component {
+export class SearchFormSm extends React.Component {
   //Helper Functions
   onChange = e => {
     this.props.searchMovie(e.target.value);
@@ -34,9 +34,6 @@ export class SearchForm extends React.Component {
             autoComplete='off'
             onChange={this.onChange}
           />
-          <button className='btn btn-primary btn-xl rounded-pill mt-5'>
-            Search
-          </button>
         </form>
       </div>
     );
@@ -51,4 +48,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { searchMovie, fetchMovies, setRedirect }
-)(SearchForm);
+)(SearchFormSm);

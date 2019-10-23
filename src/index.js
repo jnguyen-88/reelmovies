@@ -5,6 +5,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk';
 
 import App from './components/App';
+import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import reducers from './reducers';
 
@@ -17,6 +18,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
+    <Navigation />
     <App />
     <Footer />
   </Provider>,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchMovies } from '../actions';
 import MovieCard from './MovieCard';
+import SearchFormSm from './SearchFormSm';
 
 export class MoviesList extends React.Component {
   render() {
@@ -14,7 +14,14 @@ export class MoviesList extends React.Component {
             <MovieCard key={index} movie={movie} />
           ))
         : null;
-    return <div className='row'>{content}</div>;
+    return (
+      <div className='container mt-5 pt-4'>
+        <div className='mb-5 mt-5'>
+          <SearchFormSm />
+        </div>
+        <div className='row'>{content}</div>
+      </div>
+    );
   }
 }
 

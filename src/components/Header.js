@@ -5,7 +5,6 @@ import Navigation from './Navigation';
 const Header = props => {
   return (
     <header className='masthead text-center text-white'>
-      <Navigation />
       <div className='masthead-content'>
         <h1 className='masthead-heading mb-0'>Reel Movies</h1>
         <p>powered by omdb</p>
